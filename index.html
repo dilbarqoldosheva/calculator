@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Kankulyator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+    <input id="result" type="text" class="w-full bg-gray-200 p-3 rounded-lg mb-4 text-right text-2xl" readonly>
+
+    <div class="grid grid-cols-4 gap-4">
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="clearResult()">C</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="deleteLast()">DEL</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('%')">%</button>
+      <button class="bg-yellow-500 p-4 rounded-lg text-xl" onclick="appendToResult('/')">/</button>
+
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('7')">7</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('8')">8</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('9')">9</button>
+      <button class="bg-yellow-500 p-4 rounded-lg text-xl" onclick="appendToResult('*')">*</button>
+
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('4')">4</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('5')">5</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('6')">6</button>
+      <button class="bg-yellow-500 p-4 rounded-lg text-xl" onclick="appendToResult('-')">-</button>
+
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('1')">1</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('2')">2</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('3')">3</button>
+      <button class="bg-yellow-500 p-4 rounded-lg text-xl" onclick="appendToResult('+')">+</button>
+
+      <button class="bg-gray-300 p-4 rounded-lg text-xl col-span-2" onclick="appendToResult('0')">0</button>
+      <button class="bg-gray-300 p-4 rounded-lg text-xl" onclick="appendToResult('.')">.</button>
+      <button class="bg-green-500 p-4 rounded-lg text-xl" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
